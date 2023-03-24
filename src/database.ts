@@ -7,6 +7,6 @@ const uri = `mongodb+srv://${username}:${password}@main.g1zf50u.mongodb.net/?ret
 const client = new MongoClient(uri, options);
 const database = client.db("main");
 
-export const users = database.collection<{
+export const usersDB = database.collection<{
   name: string;
 }>("users");
