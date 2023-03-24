@@ -1,4 +1,4 @@
-import { Request } from "express";
+import { Request, Response } from "express";
 import * as core from "express-serve-static-core";
 
 export interface TokenInfo {
@@ -15,6 +15,7 @@ export interface ServiceRequest<
 > extends Request<P, ResBody, ReqBody, ReqQuery, Locals> {
   loginInfo?: TokenInfo;
 }
+export interface ServiceResponse extends Response {}
 
 export interface User {
   id: number;
